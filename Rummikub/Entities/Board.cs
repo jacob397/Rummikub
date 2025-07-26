@@ -2,11 +2,12 @@
 // File Name: Board.cs
 // Project Name: Rummikub
 // Creation Date: June 11, 2025
-// Modified Date:
+// Modified Date: July 23, 2025
 // Description: The board of all tiles in play.
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -48,7 +49,7 @@ public class Board
         {
             for (var j = 0; j < _board.GetLength(1); j++)
             {
-                _board[i, j] = new Tile(board.GetTile(i, j));
+                PlaceTile(i, j, new Tile(board.GetTile(i, j)));
             }
         }
     }
@@ -80,6 +81,50 @@ public class Board
         }
         
         return tiles;
+    }
+
+    // Pre: None
+    // Post: A list of all sets on the board
+    // Desc: Get all sets on the board
+    public List<List<Tile>> GetSets()
+    {
+        // Store the sets and the current considered set
+        var sets = new List<List<Tile>>();
+        var set = new List<Tile>();
+        
+        // Iterate through all tiles on the board
+        for (int j = 0; j < _board.GetLength(1); j++)
+        {
+            for (int i = 0; i < _board.GetLength(0); i++)
+            {
+                // If an empty space is found, then the current set is a completed set (provided it's long enough),
+                // so it can be added to the list of sets
+                // Otherwise, add the tile found to the current set
+                if (_board[i, j].IsEmpty())
+                {
+                    if (set.Count > 0)
+                    {
+                        if (set.Count > 0) sets.Add(set.ToList());
+                        set = [];
+                    }
+                }
+                else
+                {
+                    set.Add(_board[i, j]);
+                }
+
+                // If the end of the board is found, add the current set to the list of sets
+                if (i == _board.GetLength(0) - 1)
+                {
+                    if (set.Count > 0) sets.Add(set.ToList());
+                    set = [];
+                }
+            }
+        }
+        
+        // If the end of the board is found, add the current set to the list of sets
+        if (set.Count > 0) sets.Add(set.ToList());
+        return sets;
     }
     
     // Pre: The previous mousestate
@@ -131,14 +176,6 @@ public class Board
     }
 
     // Pre: Coordinates of the tile of interest
-    // Post: The rectangle of the tile associated with the coordinates
-    // Desc: Get a tile from its coordinates
-    public Rectangle GetTileRectangle(int i, int j)
-    {
-        return _board[i, j].GetDestinationRectangle();
-    }
-
-    // Pre: Coordinates of the tile of interest
     // Post: None
     // Desc: Remove a tile
     public void RemoveTile(int x, int y)
@@ -148,7 +185,7 @@ public class Board
         _board[x, y].SetDestinationRectangle(rect);
     }
     
-        // Pre: None
+    // Pre: None
     // Post: None
     // Desc: Empties the board by making every space hold a blank tile
     public void Clear()
@@ -171,6 +208,8 @@ public class Board
             (Tile.Height + TileSpacing), Tile.Width, Tile.Height);
         _board[x, y] = tile;
         tile.SetDestinationRectangle(rect);
+        tile.SetX(x);
+        tile.SetY(y);
     }
 
     // Pre: The set to place
@@ -254,20 +293,13 @@ public class Board
                 {
                     tiles.Add(_board[i, j]);
                 }
-
-                if (j == _board.GetLength(0) - 1)
-                {
-                    if (tiles.Count > 0 && !IsSet(tiles))
-                    {
-                        return false;
-                    }
-                    
-                    tiles = [];
-                }
             }
+            
+            if (tiles.Count > 0 && !IsSet(tiles)) return false;
+            tiles = [];
         }
-
-        return true;
+        
+        return tiles.Count == 0 || IsSet(tiles);
     }
     
     // Pre: Coordinates of the tile of interest
@@ -295,7 +327,7 @@ public class Board
     // Pre: A list of tiles
     // Post: A bool representing whether the list of tiles is a run
     // Desc: Return whether a list of tiles is a run
-    private static bool IsRun(List<Tile> tiles)
+    public static bool IsRun(List<Tile> tiles)
     {
         if (tiles.Count < MinSetSize)
         {
@@ -317,7 +349,7 @@ public class Board
     // Pre: A list of tiles
     // Post: A bool representing whether the tiles form a group
     // Desc: Determine if a list of tiles is a group
-    private static bool IsGroup(List<Tile> tiles)
+    public static bool IsGroup(List<Tile> tiles)
     {
         // If the list is too large or too small to be a group, return false
         if (tiles.Count < MinSetSize || tiles.Count > Deck.NumColours)

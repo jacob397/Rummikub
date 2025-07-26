@@ -2,7 +2,7 @@
 // File Name: Move.cs
 // Project Name: Rummikub
 // Creation Date: June 14, 2025
-// Modified Date:
+// Modified Date: July 26, 2025
 // Description: Represents a potential move that the opponent player may carry out.
 
 using System.Collections.Generic;
@@ -19,32 +19,25 @@ public class Move(List<List<Tile>> sets, Board board, Hand hand)
     private Board Board { get; } = board;
     private Hand Hand { get; } = hand;
     private int _score = Uncalculated;
-    private List<Tile> _tilesToRemove = [];
+    private readonly List<Tile> _tilesToRemove = [];
 
     // Pre: None
     // Post: The score associated with this move
     // Desc: Get the score associated with this move (higher scores mean the move is better)
     public int Score()
     {
-        if (_score != Uncalculated)
-        {
-            return _score;
-        }
+        // If the score has already been calculated, return it
+        if (_score != Uncalculated) return _score;
         
         var score = 0;
         List<Tile> usedTiles = [];
         var boardTiles = Board.GetTiles();
         var handTiles = Hand.GetTiles();
 
-        foreach (var set in Sets)
-        {
-            usedTiles.AddRange(set);
-        }
+        foreach (var set in Sets) usedTiles.AddRange(set);
         
-        if (boardTiles.Any(boardTile => !RemoveTile(usedTiles, boardTile)))
-        {
-            return -1;
-        }
+        // If any board tile is not used in the move, the score is -1
+        if (boardTiles.Any(boardTile => !RemoveTile(usedTiles, boardTile))) return -1;
 
         // For every hand tile used, the score goes up by 1
         // If a tile used in the move does not belong to the hand or the board, the move is invalid
@@ -85,16 +78,9 @@ public class Move(List<List<Tile>> sets, Board board, Hand hand)
     // Desc: Carry out this move
     public void Do()
     {
+        // Empty the board, place sets, and remove used tiles from the hand
         Board.Clear();
-        
-        foreach (var set in Sets)
-        {
-            Board.PlaceSet(set);
-        }
-        
-        foreach (var tile in _tilesToRemove)
-        {
-            hand.RemoveTile(tile);
-        }
+        foreach (var set in Sets) Board.PlaceSet(set);
+        foreach (var tile in _tilesToRemove) hand.RemoveTile(tile);
     }
 }

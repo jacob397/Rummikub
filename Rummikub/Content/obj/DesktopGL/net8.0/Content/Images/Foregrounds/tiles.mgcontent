@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/tiles.png</SourceFile>
-  <SourceTime>2025-06-11T18:55:11.0535151-04:00</SourceTime>
+  <SourceTime>2025-07-22T19:14:43.7136607-04:00</SourceTime>
   <DestFile>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/bin/DesktopGL/Content/Images/Foregrounds/tiles.xnb</DestFile>
-  <DestTime>2025-06-11T18:56:28.1101062-04:00</DestTime>
+  <DestTime>2025-07-22T19:14:56.676252-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-06-02T06:31:02-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

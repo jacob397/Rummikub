@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/game.png</SourceFile>
-  <SourceTime>2025-06-11T18:55:22.3175046-04:00</SourceTime>
+  <SourceFile>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Backgrounds/game.png</SourceFile>
+  <SourceTime>2025-07-16T15:41:27.7290145-04:00</SourceTime>
   <DestFile>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/bin/DesktopGL/Content/Images/Backgrounds/game.xnb</DestFile>
-  <DestTime>2025-06-11T18:56:27.9933669-04:00</DestTime>
+  <DestTime>2025-07-16T15:42:33.1303729-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-06-02T06:31:02-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -4,18 +4,38 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/button_click.wav</File>
     <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/disabled_button.png</File>
-    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/game.png</File>
     <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/home.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/opponent_turn.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/player_turn.png</File>
     <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/../../../../Downloads/tiles.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Audio/tile_click.wav</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Backgrounds/game.png</File>
     <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Backgrounds/instructions.png</File>
-    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Foregrounds/opponent_turn_msg.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Backgrounds/lose_screen.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Backgrounds/tie_screen.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Backgrounds/win_screen.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Foregrounds/click_to_proceed.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Foregrounds/disabled_buttons.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Foregrounds/sort_colour_number.png</File>
+    <File>/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/Content/Images/Foregrounds/sort_number_colour.png</File>
   </SourceFiles>
   <DestFiles>
+    <File>Audio/button_click.wav</File>
     <File>Images/Foregrounds/disabled_button.png</File>
-    <File>Images/Backgrounds/game.png</File>
     <File>Images/Backgrounds/home.png</File>
+    <File>Images/Foregrounds/opponent_turn.png</File>
+    <File>Images/Foregrounds/player_turn.png</File>
     <File>Images/Foregrounds/tiles.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

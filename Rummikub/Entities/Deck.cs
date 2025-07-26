@@ -2,7 +2,7 @@
 // File Name: Deck.cs
 // Project Name: Rummikub
 // Creation Date: June 11, 2025
-// Modified Date:
+// Modified Date: July 23, 2025
 // Description: The deck of tiles, which functions as a stack.
 
 using System;
@@ -12,6 +12,7 @@ namespace Rummikub.Entities;
 
 public class Deck
 {
+    private const int NumTiles = 104;
     public const int NumUniqueTiles = 52;
     public const int NumNumbers = 13;
     public const int NumColours = 4;
@@ -27,7 +28,7 @@ public class Deck
     public Deck()
     {
         // Populates the deck with all the required tiles
-        for (var i = 0; i < NumUniqueTiles; i++)
+        for (var i = 0; i < NumTiles; i++)
         {
             _deck.Add(new Tile(i));
         }
@@ -35,8 +36,8 @@ public class Deck
         // Shuffles the deck
         for (var i = 0; i < 1000; i++)
         {
-            var rand1 = Rng.Next(0, NumUniqueTiles);
-            var rand2 = Rng.Next(0, NumUniqueTiles);
+            var rand1 = Rng.Next(0, NumTiles);
+            var rand2 = Rng.Next(0, NumTiles);
             (_deck[rand1], _deck[rand2]) = (_deck[rand2], _deck[rand1]);
         }
     }

@@ -34,4 +34,14 @@
 /Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/tiles.xnb
 /Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Backgrounds/instructions.xnb
 /Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/disabled_button.xnb
-/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/opponent_turn_msg.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/opponent_turn.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/player_turn.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/sort_colour_number.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/sort_number_colour.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/disabled_buttons.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Audio/tile_click.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Audio/button_click.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Backgrounds/lose_screen.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Backgrounds/tie_screen.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Backgrounds/win_screen.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/click_to_proceed.xnb

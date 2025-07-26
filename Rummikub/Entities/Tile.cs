@@ -2,7 +2,7 @@
 // File Name: Tile.cs
 // Project Name: Rummikub
 // Creation Date: June 11, 2025
-// Modified Date:
+// Modified Date: July 26, 2025
 // Description: A tile, complete with an associated number and colour.
 
 using System;
@@ -23,6 +23,9 @@ public class Tile
     
     private readonly Rectangle _sourceRect;
     private Rectangle _destRect;
+
+    private int _x;
+    private int _y;
 
     // Pre: The position of the tile in the deck
     // Post: A tile object
@@ -171,5 +174,37 @@ public class Tile
     public void MoveLeft()
     {
         _destRect.X -= 2;
+    }
+
+    // Pre: None
+    // Post: The x-coordinate of this tile on the board
+    // Desc: Get the x-coordinate of this tile on the board
+    public int X()
+    {
+        return _x;
+    }
+
+    // Pre: None
+    // Post: The y-coordinate of this tile on the board
+    // Desc: Get the y-coordinate of this tile on the board
+    public int Y()
+    {
+        return _y;
+    }
+
+    // Pre: The new x-coordinate of this tile on the board
+    // Post: None
+    // Desc: Set the x-coordinate of this tile on the board
+    public void SetX(int x)
+    {
+        _x = x;
+    }
+
+    // Pre: The new y-coordinate of this tile on the board
+    // Post: None
+    // Desc: Set the y-coordinate of this tile on the board
+    public void SetY(int y)
+    {
+        _y = y;
     }
 }
