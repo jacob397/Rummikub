@@ -45,3 +45,4 @@
 /Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Backgrounds/tie_screen.xnb
 /Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Backgrounds/win_screen.xnb
 /Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/bin/Debug/net8.0/Content/Images/Foregrounds/click_to_proceed.xnb
+/Users/jacoblisogurski/RiderProjects/Rummikub/Rummikub/obj/Debug/net8.0/Rummikub.sourcelink.json

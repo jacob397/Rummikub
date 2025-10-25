@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rummikub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb3e1e4f854867ced96c0312da0ad2913a90730b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4841e773824a8a1e2bdcb8f9e173cf6bdbb62ea6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rummikub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rummikub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
